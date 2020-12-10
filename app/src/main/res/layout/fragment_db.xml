@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.mainFragments.DBFragment" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_used_date" />
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Index"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_used_date"
+            app:layout_constraintEnd_toStartOf="@+id/tv_used_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_used_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Used_Time"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_used_date"
+            app:layout_constraintEnd_toStartOf="@+id/tv_started_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_used_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_used_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Used_Date"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toStartOf="@+id/tv_used_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_index"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_started_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Started_time"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_used_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_used_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_used_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
